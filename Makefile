@@ -36,6 +36,7 @@ endif
 define run_docker
     docker run $(TTY_SETTING) $(INTERACTIVE_SETTING) --rm \
     --name $(CONTAINER_NAME) \
+    -v $(shell pwd)/runner-storage:/home/runner/actions-runner \
     $(DOCKER_IMAGE) $(RUN_ARGS)
 endef
 
@@ -59,7 +60,7 @@ rebuild:
 .PHONY: rebuild
 
 clean:
-	docker rmi $(DOCKER_IMAGE) .
+	docker rmi $(DOCKER_IMAGE)
 .PHONY: clean
 
 run: build
