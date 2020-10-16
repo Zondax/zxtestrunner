@@ -35,7 +35,7 @@ endif
 
 define run_docker
     docker run $(TTY_SETTING) $(INTERACTIVE_SETTING) --rm \
-    --name $(CONTAINER_NAME) \
+    --name $(CONTAINER_NAME) --network="host" \
     -v $(shell pwd)/runner-storage:/home/runner/actions-runner \
     $(DOCKER_IMAGE) $(RUN_ARGS)
 endef
