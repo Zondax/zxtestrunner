@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -yy curl build-essential wget nano && \ 
+    apt-get install -yy curl build-essential wget nano git && \ 
     apt-get install -yy bzr jq pkg-config mesa-opencl-icd ocl-icd-opencl-dev
 
 RUN wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu63_63.2-3_amd64.deb
