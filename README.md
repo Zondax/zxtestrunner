@@ -10,9 +10,17 @@ Then you will be inside the test runner. Now you should:
 
 ```
 ./install.sh
-./config.sh {TOKEN}
 ```
 
+You can now copy the config line... example:
+
 ```
+./config.sh ./config.sh --url URL --token TOKEN
+exit
+```
+
+The runner will be persistent.. any time you want to run it.. 
+```
+make
 ./start
 ```
