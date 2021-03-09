@@ -64,6 +64,7 @@ clean:
 .PHONY: clean
 
 run: build
+	chmod 777 runner-storage
 	$(call run_docker)
 .PHONY: run
 
