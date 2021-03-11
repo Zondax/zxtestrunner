@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get install -yy bzr jq pkg-config mesa-opencl-icd ocl-icd-opencl-dev libltdl7 libnuma1
 
 #OPTEE qemu dependencies
-RUN apt-get install -yy python android-tools-adb android-tools-fastboot autoconf \
+RUN apt-get install -yy python cpio android-tools-adb android-tools-fastboot autoconf \
         automake bc bison build-essential ccache cscope curl device-tree-compiler \
         expect flex ftp-upload gdisk iasl libattr1-dev libcap-dev \
         libfdt-dev libftdi-dev libglib2.0-dev libhidapi-dev libncurses5-dev \
