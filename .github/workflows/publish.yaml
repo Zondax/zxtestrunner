@@ -21,7 +21,7 @@ jobs:
       - name: Build Container Image
         run: |
           export GIT_HASH=$(git rev-parse HEAD)
-          docker build --rm -f Dockerfile -t harbor.int.zondax.net/zondax/zxtestrunner:latest -t harbor.int.zondax.net/zondax/zxtestrunner:$GIT_HASH
+          docker build --rm -f Dockerfile -t harbor.int.zondax.net/zondax/zxtestrunner:latest -t harbor.int.zondax.net/zondax/zxtestrunner:$GIT_HASH .
       - name: Push to Zondax Harbor Registry
         run: |
           export GIT_HASH=$(git rev-parse HEAD)
